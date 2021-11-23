@@ -22,8 +22,8 @@ app.use(cors()); // Добавить опции после разработки 
 app.use(cookieParser());
 app.use(helmet());
 app.use(express.json());
-app.use(limiter);
 app.use(requestLogger);
+app.use(limiter);
 
 app.use(router);
 

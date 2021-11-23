@@ -4,7 +4,7 @@ const { PORT = 3000 } = process.env;
 const { JWT_SECRET = 'qwertyasdfgh' } = process.env;
 const { MONGODB_URL = 'mongodb://localhost:27017/moviesdb' } = process.env;
 // eslint-disable-next-line no-useless-escape
-const RegExpForUrl = '(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*[\/\#]?';
+const RegExpForUrl = /(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*[\/\#]?/;
 
 const corsOptions = { // Подключить опции в app после разработки фронта
   origin: [

@@ -21,7 +21,7 @@ router.use('/signout', signoutRouter);
 router.use('/users', auth, usersRouter);
 router.use('/movies', auth, moviesRouter);
 
-router.get('*', (req, res, next) => {
+router.all('*', auth, (req, res, next) => {
   next(pageNotFoundError);
 });
 
