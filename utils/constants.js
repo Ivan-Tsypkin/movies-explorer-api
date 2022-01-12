@@ -9,8 +9,8 @@ const RegExpForUrl = /(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\
 const corsOptions = { // Подключить опции в app после разработки фронта
   origin: [
     'http://localhost:3000',
-    'https://antares.nomoredomains.xyz',
-    'http://antares.nomoredomains.xyz',
+    'https://sirius.nomoredomains.rocks',
+    'http://sirius.nomoredomains.rocks',
   ],
   methods: ['GET', 'PUT', 'PATCH', 'HEAD', 'POST', 'DELETE'],
   optionsSuccessStatus: 204,

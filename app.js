@@ -10,7 +10,7 @@ const router = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { errorReceiver } = require('./middlewares/errorReceiver');
 
-const { MONGODB_URL, PORT } = require('./utils/constants');
+const { MONGODB_URL, PORT, corsOptions } = require('./utils/constants');
 
 const app = express();
 
@@ -18,7 +18,7 @@ mongoose.connect(MONGODB_URL, {
   useNewUrlParser: true,
 });
 
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' })); // Добавить опции после разработки фронта
+app.use(cors(corsOptions)); // Добавить опции после разработки фронта
 app.use(cookieParser());
 app.use(helmet());
 app.use(express.json());
