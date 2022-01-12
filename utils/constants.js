@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3005 } = process.env;
 const { JWT_SECRET = 'qwertyasdfgh' } = process.env;
 const { MONGODB_URL = 'mongodb://localhost:27017/moviesdb' } = process.env;
 // eslint-disable-next-line no-useless-escape
