@@ -18,7 +18,7 @@ mongoose.connect(MONGODB_URL, {
   useNewUrlParser: true,
 });
 
-app.use(cors()); // Добавить опции после разработки фронта
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' })); // Добавить опции после разработки фронта
 app.use(cookieParser());
 app.use(helmet());
 app.use(express.json());
