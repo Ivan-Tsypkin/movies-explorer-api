@@ -10,7 +10,7 @@ const validateMoviePost = celebrate({
     year: Joi.string().required().min(1).max(30),
     description: Joi.string().required().min(1).max(2000),
     image: Joi.string().required(),
-    trailer: Joi.string().required(),
+    trailerLink: Joi.string().required(),
     nameRU: Joi.string().required().min(1).max(100),
     nameEN: Joi.string().required().min(1).max(100),
     thumbnail: Joi.string().required().pattern(RegExpForUrl),
